@@ -1,0 +1,282 @@
+/* General Styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+/* For webkit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header Styles */
+header {
+  background-color: #fff; /* White */
+  color: #333;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  top: 0;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+}
+
+header .container {
+  padding: 0 26px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+header .nav-right {
+  display: flex;
+}
+
+header .logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000; /* Black */
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes the nav to the extreme right */
+}
+
+header nav ul {
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin: 0 5px;
+}
+
+header nav ul li a {
+  display: inline-block;
+  color: #000; /* Black */
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  border: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+  background-color: #000; /* Black */
+  color: #fff; /* White */
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* User Menu Styles */
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Space between menu items and user icon */
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px; /* Adjusted position */
+  background-color: #000; /* Black */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 8px;
+  transition: opacity 0.3s;
+}
+
+.user-dropdown a {
+  color: #fff; /* White */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.user-dropdown a:hover {
+  background-color: #f1f1f1;
+  color: #000; /* Black */
+}
+
+.user-dropdown.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Help Section Styles */
+/* Help Section Styles */
+#help {
+  padding: 40px 30px; /* Adjusted padding for spaciousness */
+  margin: 60px auto; /* Center the section */
+  max-width: 800px; /* Max width for readability */
+  background-color: #f5f5f7; /* Soft light gray for a cleaner look */
+  border-radius: 20px; /* More rounded corners for a modern feel */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+}
+
+/* Section Heading */
+#help h2 {
+  font-size: 36px; /* Increased heading size for impact */
+  color: #1c1c1e; /* Dark gray text color for better contrast */
+  margin-bottom: 30px; /* Increased space below heading */
+  text-align: center; /* Center align heading */
+  font-family: "Roboto", sans-serif; /* Stylish font */
+  font-weight: 600; /* Semi-bold weight for a refined appearance */
+  border-bottom: 2px solid #000; /* Underline effect for emphasis */
+  padding-bottom: 10px; /* Space between text and underline */
+}
+
+/* Contact Info Styling */
+.contact-info {
+  text-align: center; /* Center align contact info */
+  margin-bottom: 40px; /* Space below contact info */
+}
+
+/* Contact Info Paragraph */
+.contact-info p {
+  font-size: 18px; /* Larger paragraph size for readability */
+  color: #4c4c4e; /* Medium gray text color */
+  line-height: 1.5; /* Improved line height for readability */
+}
+
+/* Contact Phone Number */
+.contact-info .phone {
+  font-size: 20px; /* Increased font size for emphasis */
+  font-weight: 700; /* Bold weight for phone number */
+  color: #007aff; /* Apple blue for phone number */
+  margin-top: 10px; /* Space above phone number */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+.contact-info .phone:hover {
+  color: #0051ba; /* Darker blue on hover */
+  text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+/* Strong Text Color */
+.contact-info strong {
+  color: #000; /* Strong text color */
+}
+
+/* Form Styles */
+#helpForm {
+  background-color: #ffffff; /* White background for the form */
+  padding: 30px; /* Padding inside the form */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  transition: box-shadow 0.3s; /* Transition for hover effect */
+}
+
+/* Form Hover Effect */
+#helpForm:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Label Styles */
+#helpForm label {
+  display: block; /* Block display for labels */
+  margin-bottom: 8px; /* Space below labels */
+  font-weight: 500; /* Medium text for labels */
+  color: #333; /* Dark text color */
+}
+
+/* Input and Textarea Styles */
+#helpForm input,
+#helpForm textarea {
+  width: 100%; /* Full width inputs */
+  padding: 12px; /* Padding inside inputs */
+  margin-bottom: 15px; /* Space below inputs */
+  border: 1px solid #d1d1d6; /* Light gray border for a softer look */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px; /* Font size for inputs */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions for focus state */
+}
+
+/* Input Focus Styles */
+#helpForm input:focus,
+#helpForm textarea:focus {
+  border-color: #000000; /* Apple blue for focus */
+  box-shadow: 0 0 5px rgba(16, 16, 17, 0.5); /* Light blue glow */
+  outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+#helpForm button {
+  background-color: #000000; /* Apple blue */
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 12px 20px; /* Increased padding for a better button */
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s; /* Added transition for hover effect */
+  font-weight: 600; /* Semi-bold for button text */
+}
+
+/* Button Hover Effect */
+#helpForm button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  transform: scale(1.05); /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #help {
+    padding: 20px; /* Less padding on smaller screens */
+  }
+
+  #helpForm {
+    padding: 15px; /* Less padding for the form on smaller screens */
+  }
+
+  #help h2 {
+    font-size: 28px; /* Responsive heading size */
+  }
+
+  .contact-info p {
+    font-size: 16px; /* Responsive paragraph size */
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #000; /* Black */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

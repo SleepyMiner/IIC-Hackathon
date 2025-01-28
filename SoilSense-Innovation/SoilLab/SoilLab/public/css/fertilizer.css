@@ -1,0 +1,273 @@
+/* General Styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+/* For webkit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header Styles */
+header {
+  background-color: #fff; /* White */
+  color: #333;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  top: 0;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+}
+
+header .container {
+  padding: 0 26px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+header .nav-right {
+  display: flex;
+}
+
+header .logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000; /* Black */
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes the nav to the extreme right */
+}
+
+header nav ul {
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin: 0 5px;
+}
+
+header nav ul li a {
+  display: inline-block;
+  color: #000; /* Black */
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  border: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+  background-color: #000; /* Black */
+  color: #fff; /* White */
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* User Menu Styles */
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Space between menu items and user icon */
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px; /* Adjusted position */
+  background-color: #000; /* Black */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 8px;
+  transition: opacity 0.3s;
+}
+
+.user-dropdown a {
+  color: #fff; /* White */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.user-dropdown a:hover {
+  background-color: #f1f1f1;
+  color: #000; /* Black */
+}
+
+.user-dropdown.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Fertilizer Recommender Styles */
+.fertilizer-section {
+  padding: 10px 20px;
+  background: url("../image/crop2.jpg") no-repeat center center/cover;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+section.fertilizer-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+section.fertilizer-section h1 {
+  font-size: 36px;
+  margin: 40px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+/* Form styling with grid for two-column layout */
+section.fertilizer-section form {
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 35px; /* Reduced vertical and horizontal gaps */
+  position: relative;
+  margin: 0 auto;
+  text-align: left;
+  font-weight: bold;
+}
+
+section.fertilizer-section .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+section.fertilizer-section .form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+/* Input fields */
+section.fertilizer-section input,
+section.fertilizer-section select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: white;
+}
+
+/* Custom dropdown styling */
+section.fertilizer-section select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: white url("../image/dropdown-arrow.svg") no-repeat right 10px
+    center;
+  background-size: 12px;
+}
+
+/* Button styling */
+section.fertilizer-section button {
+  grid-column: span 2;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+section.fertilizer-section button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  transform: scale(1.05);
+}
+
+/* Recommendation box styling */
+section.fertilizer-section .alert-info {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  color: #141516;
+  display: block;
+  clear: both;
+}
+
+section.recommendation-section .alert-info img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Ensures the image scales down to fit the container */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 300px; /* Sets a maximum height for the image */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section.fertilizer-section .alert-info p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #9d0000; /* Ensure text color matches */
+  margin-top: 20px; /* Space between image and text */
+}
+/* Footer Styles */
+footer {
+  background-color: #000; /* Black */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

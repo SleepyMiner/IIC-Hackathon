@@ -1,0 +1,19 @@
+/* public/css/custom.css */
+
+/* Navbar Styling */
+.navbar {
+    border-bottom: 2px solid hsl(37, 84%, 45%);
+}
+
+/* Active Link Styling */
+.nav-link.active {
+    font-weight: bold;
+    color: #d58916 !important;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f1f5f9;
+    padding: 15px 0;
+    border-top: 1px solid #f7f6f6;
+}

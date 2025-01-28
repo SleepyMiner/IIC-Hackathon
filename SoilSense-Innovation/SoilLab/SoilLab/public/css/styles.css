@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f0f0f0;
+}
+/* For webkit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  transition: transform 0.6s ease;
+}
+
+.left {
+  flex: 1;
+  background: url("../image/farm1.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay for better text visibility */
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px); /* Adds blur effect to the background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  max-width: 80%;
+  width: 90%;
+  text-align: center;
+}
+
+.logo {
+  max-width: 120px;
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.author {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.right {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: opacity 0.6s ease;
+}
+
+.right h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.right .subtitle {
+  margin-bottom: 30px;
+  color: #666;
+  font-size: 1.2em;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  opacity: 1;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: absolute;
+}
+
+.signup-form {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.login-form {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.container.active .signup-form {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.container.active .login-form {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+form input {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.2);
+}
+
+form button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+}
+
+form button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+form button:active {
+  background-color: #1e7e34;
+  transform: translateY(0);
+}
+
+.login,
+.signup {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #333;
+}
+
+.login a,
+.signup a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login a:hover,
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* Notification Popup */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  display: none;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.6s ease;
+}
+
+.notification.show {
+  display: flex;
+  opacity: 1;
+}
+
+.notification button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,255 @@
+/* General Styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+/* For webkit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header Styles */
+header {
+  background-color: #fff; /* White */
+  color: #333;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  top: 0;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+}
+
+header .container {
+  padding: 0 26px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+header .nav-right {
+  display: flex;
+}
+
+header .logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000; /* Black */
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes the nav to the extreme right */
+}
+
+header nav ul {
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin: 0 5px;
+}
+
+header nav ul li a {
+  display: inline-block;
+  color: #000; /* Black */
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  border: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+  background-color: #000; /* Black */
+  color: #fff; /* White */
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* User Menu Styles */
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Space between menu items and user icon */
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px; /* Adjusted position */
+  background-color: #000; /* Black */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 8px;
+  transition: opacity 0.3s;
+}
+
+.user-dropdown a {
+  color: #fff; /* White */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.user-dropdown a:hover {
+  background-color: #f1f1f1;
+  color: #000; /* Black */
+}
+
+.user-dropdown.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Weather Forecast Styles */
+.weather-section {
+  padding: 10px 20px;
+  background: url("../image/weather.jpg") no-repeat center center/cover; /* Add your image path here */
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.weather-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text readability */
+}
+
+.weather-section h1 {
+  font-size: 42px;
+  margin: 40px;
+  color: #ffffff;
+  position: relative;
+}
+
+.weather-section form {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 25px 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.weather-section form input {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: calc(70% - 30px);
+  margin-right: 10px;
+  font-size: 1em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.weather-section form input:focus {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.weather-section form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  width: calc(30% - 22px);
+  vertical-align: top;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.weather-section form button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000;
+}
+
+.weather-card-container {
+  margin-top: 50px;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  text-align: left;
+  color: #141414;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.weather-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #007bff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #555;
+}
+
+.weather-card p strong {
+  color: #333;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #000; /* Black */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
