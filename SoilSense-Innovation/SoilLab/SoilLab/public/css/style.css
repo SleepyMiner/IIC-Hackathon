@@ -1,0 +1,352 @@
+/* General Styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  background-color: #f4f4f4; /* Light gray background */
+}
+
+/* For webkit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+  display: none;
+}
+/* Header Styles */
+header {
+  background-color: #ffffff; /* White */
+  color: #333;
+  padding: 5px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 5px solid #000000; /* White border */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header .logo {
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  color: #222; /* Darker black */
+  letter-spacing: 1px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 8px;
+  font-size: 20px;
+}
+
+header nav ul li a {
+  display: inline-block;
+  color: #333; /* Dark gray */
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  border: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+  background-color: #0c0c0c; /* Dark gray */
+  color: #fff; /* White */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff; /* White border */
+}
+
+/* Home Section Styles */
+#home {
+  background: url("../image/seed.jpg") no-repeat center center/cover;
+  background-attachment: fixed; /* Fixed background image */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+#home .intro {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3)
+  ); /* Gradient overlay */
+  padding: 60px 70px; /* Adjusted padding */
+  border-radius: 20px; /* Slightly larger radius */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  max-width: 700px; /* Constrain width */
+  margin: 0 auto; /* Center align */
+}
+
+#home .btn {
+  display: inline-block;
+  background-color: #000000; /* Darker gray */
+  color: #ffffff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+  border: 2px solid transparent;
+  font-size: 18px; /* Consistent button text size */
+  font-weight: 600; /* Bold text */
+}
+
+#home .intro h1 {
+  font-size: 42px; /* Larger and more impactful */
+  margin-bottom: 20px;
+  color: #ffffff; /* White text color */
+  font-weight: 700; /* Bold text for emphasis */
+  line-height: 1.2; /* Improved line height for readability */
+}
+
+#home .intro p {
+  font-size: 20px; /* Slightly smaller, but still prominent */
+  margin-bottom: 30px;
+  color: #e0e0e0; /* Light gray text for better contrast */
+  line-height: 1.7; /* Improved readability */
+  max-width: 600px; /* Constrain width for better text alignment */
+  margin-left: auto;
+  margin-right: auto; /* Center align text */
+}
+
+#home .btn:hover {
+  background-color: #ffffff; /* White */
+  color: #201f1f; /* Dark gray */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000000; /* Dark gray border */
+}
+
+/* Features Section Styles */
+.features-section {
+  padding: 100px 20px;
+  background-color: #ffffff; /* White */
+  text-align: center;
+}
+
+.features-section h2 {
+  margin-bottom: 50px;
+  font-size: 42px;
+  color: #222; /* Darker black */
+}
+
+.features-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #303132; /* Accent color line */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-box {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-box img {
+  width: 100%; /* Ensure images fit within the feature-box */
+  height: 200px; /* Fixed height for consistent size */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.feature-box h3 {
+  margin-bottom: 15px;
+  color: #222; /* Darker black */
+}
+
+.feature-box p {
+  color: #555; /* Medium dark gray */
+  text-align: center;
+  line-height: 1.6; /* Improve text readability */
+}
+
+/* About Section Styles */
+.about-section {
+  padding: 100px 20px;
+  background-color: #eee9e9; /* Slightly different background color */
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+  margin-right: 20px; /* Add some spacing between text and image */
+}
+
+.about-image {
+  flex: 1;
+  text-align: right;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.about-section h2 {
+  margin-bottom: 30px;
+  font-size: 42px;
+  color: #222; /* Darker black */
+  position: relative;
+  display: inline-block;
+}
+
+.about-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #303132; /* Accent color line */
+  position: absolute;
+  right: 1; /* Align to the right */
+  bottom: -10px; /* Position below the heading */
+  border-radius: 2px;
+}
+
+.about-section p {
+  color: #555; /* Medium dark gray */
+  font-size: 20px;
+  line-height: 1.8; /* Improve text readability */
+}
+
+/* Contact Us Section Styles */
+.contact-section {
+  padding: 80px 20px;
+  background: rgba(255, 255, 255, 0.9); /* Transparent white background */
+  color: #333; /* Dark gray text color */
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #222; /* Darker gray for the heading */
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #303132; /* Accent color line */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #555; /* Medium dark gray for body text */
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* Increased gap between items */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  background: #ffffff; /* White background for contact items */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  flex: 1 1 280px; /* Responsive flex-basis */
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Increased gap between icon and text */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-item i {
+  font-size: 32px;
+  color: #201e1e; /* Blue color for icons */
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 18px;
+  color: #333; /* Dark gray for text */
+}
+
+.contact-item a {
+  color: #1e90ff; /* Blue color for email link */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #000; /* Black */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
